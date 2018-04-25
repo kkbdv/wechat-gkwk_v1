@@ -1,0 +1,10 @@
+<!--pages/home/index.wxml-->
+<import src = "/pages/common/swiper.wxml"/>
+<view class='container'>
+  <view class='zan-panel'>
+    <template is="home-block" data="{{...func_block_list,componentId:'func_block_list'}}"/>
+  </view>
+  <view class='zan-panel'>
+    <text>23</text>
+  </view>
+</view>
