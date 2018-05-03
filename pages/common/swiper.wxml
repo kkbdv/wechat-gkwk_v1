@@ -1,23 +1,54 @@
 <!--滑动模块-->
 <template name="index-swiper">
-<view class="swiper">
+  <view class="swiper">
     <swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{indicatorDotsactive}}" >
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{indicatorDotsactive}}" >
     <block wx:for="{{imgUrls}}"  wx:key>
       <swiper-item>
         <image src='{{item.image}}' />
       </swiper-item>
     </block>
     </swiper>
-</view>
+  </view>
 </template>
 
 <!--功能块-->
 <template name="home-block">
   <block wx:for="{{pageone}}" wx:key="">
-    <view class="{{style}}" data-category='{{item.categoryId}}' bindtap='_handlecategory'>
+    <view class="category-info" data-category='{{item.categoryId}}' bindtap='_handlecategory'>
         <image src="{{item.src}}" class="category-image"></image>
         <view class="category-text">{{item.name}}</view>
     </view>
+    
   </block>
+</template>
+
+<!--卡片模块-->
+<template name="home-card">
+  <block wx:for="{{choicest}}" wx:key="">
+    <view class='custom-panel' bindtap='_handlechoice' data-shopid='{{item.shopid}}'>
+      <view class='zan-card'>
+        <view class="zan-card__thumb">
+          <image class="zan-card__img"
+            src="https://img.yzcdn.cn/upload_files/2016/11/25/FpqPXlrMRjKwJs8VdTu3ZDJCj4j5.jpeg?imageView2/2/w/200/h/200/q/90/format/jpeg"
+            mode="aspectFit"
+          ></image>
+        </view>
+        <view class="zan-card__detail">
+          <view class='zan-card__detail-row'>
+            <view class='zan-card__right-col zan-c-gray-dark zan-font-12'>1.3km</view>
+            <view class='zan-card__left-col zan-font-bold zan-font-16 zan-ellipsis-'>{{item.name}}</view> <!--店铺名字 -->
+          </view>
+          <view class='zan-card__detail-row'>
+            <view class='zan-card__left-col zan-font-12 zan-c-black zan-ellipsis--l2'>{{item.explian}}</view>
+            <view class=''></view>
+          </view><!--店铺补充 -->
+          <view class='zan-card__detail-row' style='position: relative;top:44rpx;'>
+            <view class='zan-card__right-col zan-c-black zan-font-12'>配送时间 |<text class='zan-c-blue'>{{item.sendT}}</text></view><!--配送时间 -->
+            <view class='zan-card__left-col zan-c-gray-dark zan-font-12'>¥{{item.minC}}起送 |配送费¥{{item.addC}}</view>
+          </view><!--起送费和配送费 -->
+        </view>
+      </view>
+    </view>
+  </block> 
 </template>

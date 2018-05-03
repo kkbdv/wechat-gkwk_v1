@@ -4,7 +4,7 @@
   overflow: hidden;
   min-height: 100vh;
   box-sizing: border-box;
-  padding: 15px 0;
+  padding: 0;
 }
 .container::before {
   position: fixed;
@@ -30,4 +30,5 @@
   font-size: 14px;
   line-height: 20px;
   color: #666;
+  
 }

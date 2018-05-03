@@ -1,10 +1,24 @@
 <!--pages/home/index.wxml-->
 <import src = "/pages/common/swiper.wxml"/>
 <view class='container'>
-  <view class='zan-panel'>
-    <template is="home-block" data="{{...func_block_list,componentId:'func_block_list'}}"/>
+  <!--搜索-->
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input"  disabled='true' placeholder="搜索商店" bindtap="wxSearchTab"/>
+    </view>
+    </view>
   </view>
+  <!--搜索-->
   <view class='zan-panel'>
-    <text>23</text>
+    <template is="home-block" data="{{...func_block_list}}"/>
+  </view><!--功能区块-->
+  <view class='home-title'>
+    
+  </view><!--滑动广告-->
+  <view class='subheading'>
+    <text class='doc-description ' style='font-size:18px;'>—— 店家精选 ——</text>
   </view>
-</view>
+  <template is="home-card" data="{{...choicest_list}}"/>
+  </view>

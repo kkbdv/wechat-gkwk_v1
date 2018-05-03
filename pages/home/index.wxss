@@ -1,18 +1,17 @@
 /* pages/home/index.wxss */
-.category-image{
-  width: 95rpx;
-  height: 95rpx;
-}/*图片样式*/
-.category-text{
-  font-size: 25rpx;
+@import "../../wxSearchView/wxSearchView.wxss";
+@import "../common/functionCard.wxss";
+.home-title{
+  background-color: grey;
+  height: 350rpx;
   width: 100%;
-  line-height: 30rpx
-}/*字样式*/
-.category-info{
-  display: inline-block;
-  text-align: center;
-  position: relative;
-  margin-top: 20rpx;
-  height: 150rpx;
-  width: 25%;
+}
+.custom-panel{
+  background-color: white;
+  border-bottom:2rpx solid gainsboro;
+  margin-bottom: 10rpx;
+}
+.subheading{
+  text-align:center;
+  margin:20rpx 0;
 }

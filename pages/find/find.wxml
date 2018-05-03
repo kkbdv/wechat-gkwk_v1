@@ -1,0 +1,7 @@
+<!--pages/find/find.wxml-->
+ <import src="../common/card.wxml"/>
+<view class='container'>
+  <view>
+    <template is="card" data="{{textList,colorArr}}"></template>
+  </view>
+</view>

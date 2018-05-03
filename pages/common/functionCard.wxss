@@ -1,0 +1,17 @@
+.category-image{
+  width: 95rpx;
+  height: 95rpx;
+}/*图片样式*/
+.category-text{
+  font-size: 25rpx;
+  width: 100%;
+  line-height: 30rpx
+}/*字样式*/
+.category-info{
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  margin-top: 20rpx;
+  height: 150rpx;
+  width: 25%;
+}

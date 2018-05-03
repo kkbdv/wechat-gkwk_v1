@@ -1,0 +1,24 @@
+<!--pages/order/order.wxml-->
+<view class='container'>
+  <view class="swiper-tab">
+    <view class=" {{currentTab==0?'active':''}} zan-col-12" data-current="0" bindtap="clickTab"> 
+      进行中
+    </view>
+    <view class=" {{currentTab==1?'active':''}} zan-col-12 " data-current="1" bindtap="clickTab">
+    已完成
+    </view>
+  </view>
+    <!-- 滑动子页 -->
+  <swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab"  style="height:{{windheight}}px;">
+    <swiper-item>
+      <scroll-view>
+        未完成
+      </scroll-view>
+    </swiper-item>
+     <swiper-item>
+      <scroll-view>
+        已完成
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

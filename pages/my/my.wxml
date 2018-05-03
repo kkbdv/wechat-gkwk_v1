@@ -1,0 +1,66 @@
+<!--pages/my/my.wxml-->
+<import src = "/pages/common/swiper.wxml"/>
+<view class='container'>
+  <!-- 用户头像部分 -->
+  <view class='bg' style='background:url("../../images/bg.jpg");-webkit-background-size:cover;'>
+  <view class='myhead'>
+    <view class='myimg zan-col-5 zan-col-offset-2' >
+       <image src='{{userInfo.avatarUrl}}' />
+    </view>
+    <view class='myheading'>
+      <view wx:if="{{hide==0}}" class='tips'>
+        <button class='zan-btn' open-type='getUserInfo' bindgetuserinfo='getUserInfo'><text  class='tips_title'>点击登陆</text></button>
+        <text class='tips_subtitle'>登陆更精彩</text>
+     </view>
+      <text wx:else style='position:relative;top:50rpx;'>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  </view>
+  <!-- 消息 -->
+  <view class='message'>
+    <image src='/images/message.png' style='width:70rpx;height:70rpx;'></image>
+  </view>
+  <!-- 用户头像部分 -->
+
+  <!-- 选项卡 -->
+  <view class='zan-col zan-col-22 zan-col-offset-1 my_tabs'>
+    <template is="home-block" data="{{pageone}}"/>
+  </view>
+  <!-- 选项卡 -->
+
+  <!-- 选项入口 -->
+   <view class="zan-panel my_tabbar">
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd" style='font-size:14px;'>
+        <image src='/images/location.png' style='width:45rpx;height:45rpx;margin-right:10rpx;'></image>
+      我的地址</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd" style='font-size:14px;'>
+        <image src='/images/addtask.png' style='width:45rpx;height:45rpx;margin-right:10rpx;'></image>
+      发布任务</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd" style='font-size:14px;'>
+        <image src='/images/accepttask.png' style='width:45rpx;height:45rpx;margin-right:10rpx;'></image>
+      接受任务</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+     <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd" style='font-size:14px;'>
+        <image src='/images/service.png' style='width:45rpx;height:45rpx;margin-right:10rpx;'></image>
+      联系客服</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+     <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd" style='font-size:14px;'>
+        <image src='/images/inshop.png' style='width:45rpx;height:45rpx;margin-right:10rpx;'></image>
+      商家入驻</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+  </view>
+
+  <!-- 选项入口 -->
+</view>
